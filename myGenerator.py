@@ -27,6 +27,9 @@ class myImageDataGenerator(ImageDataGenerator):
                                  subset=subset,
                                  interpolation=interpolation)
 
+# DSTF6:
+# Modify DataFrameIterator in keras_preprocessing/image.py
+# to support multi-label model.
 class myDataFrameIterator(Iterator):
     def __init__(self, dataframe, directory, image_data_generator,
                  x_col="filenames", y_col="class", has_ext=True,
